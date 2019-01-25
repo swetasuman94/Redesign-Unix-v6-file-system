@@ -1,6 +1,6 @@
 /***********************************************************************
  CS 5348 Operating Systems Concepts Fall 2018
- Authors: Luay Abdeljaber, Sweta Suman, Shailaja Patangi
+ Authors: Sweta Suman, Luay Abdeljaber, Shailaja Patangi
 
  This program allows user to do two things:
    1. initfs: Initilizes the file system and redesigning the Unix file system to accept large
