@@ -1,7 +1,9 @@
 Unix V6 file-system
 
+Team Members: Sweta Suman, Luay Abdeljaber, Shailaja Patangi
+
 Requirements:
-Unix V6 file system has limitation of 16MB on file size. Redesign the file system to remove this limitation. In particular, you should support files up to 4GB in size. Also, the block size is 1024 Bytes, all fields of Super Block are now doubled and the free [ ] array is expanded so that the information stored in the super block is closer to 1024 Bytes. (We don’t want to waste any part of Super Block.)
+Unix V6 file system has limitation of 16MB on file size. Redesigned the file system to remove this limitation. In particular, supporting files up to 4GB in size. Also, the block size is 1024 Bytes, all fields of Super Block are now doubled and the free [ ] array is expanded so that the information stored in the super block is closer to 1024 Bytes. (We don’t want to waste any part of Super Block.)
 
 User input/commands:
 * initfs path_name size_of_file_system number_of _inodes - initialize file system. 
@@ -13,7 +15,7 @@ User input/commands:
 
 Usage Examples:
 * $ Initfs /home/010/l/lx/lxa180010/test.data 17000 300
-  Initializes a file system with a size of 17000 blocks and 300 inodes. Each block is 1024 Bytes in size. Super Block is fully utilizing     all bytes in the block. Free array is a size of 152 elements. I node array has 200 elements. 
+  Initializes a file system with a size of 17000 blocks and 300 inodes. Each block is 1024 Bytes in size. Super Block is fully utilizing     all bytes in the block. Free array is a size of 152 elements. 1 node array has 200 elements. 
   
   A file of size up to 4GB can be created since the following was implemented:
   o Free [] of type unsigned int.
@@ -27,6 +29,6 @@ Usage Examples:
 * $ mkdir  /home/010/l/lx/lxa180010/test.data/abc
   If directory abd does not exist, create the directory with the entries . and ..
 * $ rm  /test.data/cpin_file
-  Removes cpin_file that was created in our file system. Doing so, the directory entry is removed, data blocks are in the free list, and     inode is free.
+  Removes cpin_file that was created in our file system. Doing so, the directory entry is removed, data blocks are added to the free list, and inode is made free.
 * $ q
   Saves all changes we did to the file system test.data and exits. 
